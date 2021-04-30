@@ -141,7 +141,7 @@ console.log(intro.age)
 console.log(intro.summary())
 */
 //--------------------------------------------------------------------------
-
+/*
 // Coding Challange #3
 
 const Mark = {
@@ -177,3 +177,56 @@ console.log(Mark.BMI, John.BMI)
 // }
 
 console.log(`${Mark.fullName} has BMI (${Mark.BMI}) ${Mark.BMI > John.BMI ? 'higher' : 'lower'} than ${John.fullName} BMI (${John.BMI})`)
+*/
+
+//------------------------------------------------------------------------
+/*
+//odd and even number
+
+const arr = [20, 45, 67, 33, 21, 90, 74, 77, 80]
+const odd = []
+const even = []
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+        even.push(arr[i])
+    }
+    else {
+        odd.push(arr[i])
+    }
+
+}
+console.log(`The given array is ${arr}`)
+console.log(`The odd numbers in the given array is ${odd}`)
+console.log(`The odd numbers in the given array is ${even}`)
+*/
+
+//-----------------------------------------------------------------------
+/*
+//coding challange #4
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+const calcTip = function (bill_val) {
+    let tip = 0
+    bill_val >= 50 && bill_val <= 300 ? tip = 0.15 * bill_val : tip = 0.2 * bill_val
+
+    // if (bill >= 50 && bill <= 300) {
+    //     tip = 0.15 * bill
+    // }
+    // else {
+    //     tip = 0.2 * bill
+    // }
+    return tip
+}
+
+for (let i = 0; i < bills.length; i++) {
+    val = calcTip(bills[i])
+    tips.push(val)
+    totals.push(bills[i] + val)
+
+}
+console.log(tips)
+console.log(totals)
+*/
+
