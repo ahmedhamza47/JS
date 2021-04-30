@@ -113,5 +113,67 @@ tipValue.push(tips)
 */
 
 //--------------------------------------------------------
+/*
+// dot vs Bracket Notation
 
+const intro = {
+    firstName: 'Hamza',
+    lastName: 'Ahmed',
+    rollNo: 6,
+    friends: ['Sunil', 'Undertaker', 'Batista'],
+    age: function (birthYear) {
+        //console.log(this)
+        this.age = 2020 - birthYear
+        // return `${this.firstName} is ${this.age} years old.`
+        return this.age
+    },
+    hasDriverLicense: false,
 
+    summary: function () {
+        return `${this.firstName} is ${this.age} years old and he has ${this.hasDriverLicense ? 'a' : 'no'} driving license.`
+    }
+}
+
+console.log(`${intro.firstName} has ${intro.friends.length} friends, and his best friend is called ${intro.friends[1]}.`)
+birthYears = prompt('Enter your birth year')
+console.log(intro.age(birthYears))
+console.log(intro.age)
+console.log(intro.summary())
+*/
+//--------------------------------------------------------------------------
+
+// Coding Challange #3
+
+const Mark = {
+    fullName: 'Mark Zukerburg',
+    mass: 90,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2
+        return this.BMI
+    }
+}
+const John = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2
+        return this.BMI.toFixed(1)
+    }
+}
+
+Mark.calcBMI()
+John.calcBMI()
+console.log(Mark.BMI, John.BMI)
+// if (Mark.BMI > John.BMI) {
+//     console.log(`${Mark.fullName} BMI (${Mark.calcBMI()}) is greater than ${John.fullName} BMI (${John.calcBMI()})`)
+// }
+// else if (John.BMI > Mark.BMI) {
+//     console.log(`${John.fullName} BMI (${John.calcBMI()}) is greater than ${Mark.fullName} BMI (${Mark.calcBMI()})`)
+// }
+// else {
+//     console.log('Draw')
+// }
+
+console.log(`${Mark.fullName} has BMI (${Mark.BMI}) ${Mark.BMI > John.BMI ? 'higher' : 'lower'} than ${John.fullName} BMI (${John.BMI})`)
